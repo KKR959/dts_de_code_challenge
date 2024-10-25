@@ -1,6 +1,0 @@
-2024-10-24 20:51:21,777 - read_files_from_dir - INFO - File read successfully: file1.xml
-2024-10-24 20:51:21,777 - read_files_from_dir - INFO - File read successfully: file2.xml
-2024-10-24 20:51:21,778 - parse_xml - INFO - XML Parse Successful; order_id 103
-2024-10-24 20:51:21,779 - parse_window_parameter - ERROR - Invalid window parameter: 2M. Supported format is a number followed by H, D, W
-2024-10-24 20:51:21,782 - window_by_datetime - INFO - Data filtered by 1D successfully.
-2024-10-24 20:51:21,783 - process_to_RO - INFO - Successfully processed data into 1 RO objects.
