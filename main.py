@@ -169,6 +169,10 @@ def write_to_sqlite(ro_list: List[RO], db_name: str = 'repair_orders.db'):
     Current behavior is to overwrite records where an order_id already exists evertime the script is called.
     Depending on how we wanted to keep track of the data, we could modify this behavior to only insert new records removing the unique constraint on order_id.
     If this route were to be taken processed_at field could be used to grab most recent updates of orders.
+
+    Other considerations:
+    - We could opt to split the data into multiple tables to normalize the data and reduce redundancy. Such as a repair details table or repair parts table
+    - We could also add a lookup table for orders_id and keep all processed updates for each order_id.
     """
     logger = logging.getLogger("write_to_sqlite")
     try:
@@ -192,6 +196,11 @@ def write_to_sqlite(ro_list: List[RO], db_name: str = 'repair_orders.db'):
 
 
 def pipeline(dir: str, window: str):
+    """
+    Executes the script pipeline.
+
+    Note: Everytime the script is run a timestamped log file is generated in logs/ directory.
+    """
     logger = logging.getLogger("pipeline")
     try:
         xml_files = read_files_from_dir(dir)
@@ -218,4 +227,15 @@ def pipeline(dir: str, window: str):
         logger.error(f"Error running pipeline: {e}")
 
 if __name__ == '__main__':
-    pipeline('data', window='1H')
+    """
+    Main entry point for the script.
+
+    Window Variable:
+        - Can be updated to any valid window parameter to filter the data by a specific time window.
+
+        Valid Parameters:
+        - Any number followed by  'H' (hour), 'D' (day), 'W' (week)
+        - Example: '5H', '3D', '1W'
+    """
+    window = '1D'
+    pipeline('data', window)

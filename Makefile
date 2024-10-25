@@ -1,18 +1,23 @@
 # Makefile for setup, test, and run
 # Note: Commands are set to work on Windows Machines
 
-.PHONY: all clean init run test
+.PHONY: all clean_venv init run test purge
 
 # Clean: remove venv and pycache files
-clean:
-	@echo Cleaning environment...
+clean_venv:
+	@echo Cleaning virtual environment...
 	@if exist venv rmdir /S /Q venv
-	@if exist log.txt del /F /Q log.txt
-	@if exist ro.db del /F /Q ro.db
 	@echo Cleanup finished.
 
+# Purge: removes all log files and the db
+purge:
+	@echo Purging logs and database...
+	@if exist logs rmdir /F /Q logs
+	@if exist ro.db del /F /Q ro.db
+	@echo Purge complete.
+
 # Init: create virtual environment and install dependencies
-init: clean
+init: clean_venv
 	@echo Setting up virtual environment...
 	python -m venv venv
 	call venv\Scripts\activate && pip install -r requirements.txt
@@ -26,9 +31,9 @@ run:
 # Test: run unit tests
 test:
 	@echo Running unit tests...
-	@call venv\Scripts\activate && python -m unittest discover -s tests -p "*_test.py"
+	@call venv\Scripts\activate && python unit_test.py
 	@echo Unit tests complete.
 
-# All: run init, test, and run
-all: clean init test run
+# All: run clean_venv, init, test, and run
+all: clean_venv init test run
 	@echo All tasks complete.

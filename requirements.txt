@@ -1,3 +1,2 @@
 pandas
 pytest
-python-dateutil
