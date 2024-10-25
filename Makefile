@@ -12,8 +12,8 @@ clean_venv:
 # Purge: removes all log files and the db
 purge:
 	@echo Purging logs and database...
-	@if exist logs rmdir /F /Q logs
-	@if exist ro.db del /F /Q ro.db
+	@if exist logs rmdir /S /Q logs
+	@if exist repair_orders.db del /Q repair_orders.db
 	@echo Purge complete.
 
 # Init: create virtual environment and install dependencies
