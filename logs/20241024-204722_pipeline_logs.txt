@@ -1,0 +1,33 @@
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_01.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_02.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_03.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_04.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_05.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_06.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_07.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_08.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_09.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_10.xml
+2024-10-24 20:47:22,768 - read_files_from_dir - INFO - File read successfully: data\shard_11.xml
+2024-10-24 20:47:22,769 - read_files_from_dir - INFO - File read successfully: data\shard_12.xml
+2024-10-24 20:47:22,769 - read_files_from_dir - INFO - File read successfully: data\shard_13.xml
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 101
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 102
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 103
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 101
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 102
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 103
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 101
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 102
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 104
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 104
+2024-10-24 20:47:22,769 - parse_xml - INFO - XML Parse Successful; order_id 101
+2024-10-24 20:47:22,770 - parse_xml - INFO - XML Parse Successful; order_id 103
+2024-10-24 20:47:22,770 - parse_xml - ERROR - Malformed XML structure, skipping file: mismatched tag: line 10, column 10
+2024-10-24 20:47:22,772 - window_by_datetime - INFO - Data filtered by 1D successfully.
+2024-10-24 20:47:22,772 - process_to_RO - INFO - Successfully processed data into 4 RO objects.
+2024-10-24 20:47:22,773 - write_to_sqlite - INFO - Successfully wrote order_id: 101 to database.
+2024-10-24 20:47:22,773 - write_to_sqlite - INFO - Successfully wrote order_id: 102 to database.
+2024-10-24 20:47:22,773 - write_to_sqlite - INFO - Successfully wrote order_id: 103 to database.
+2024-10-24 20:47:22,773 - write_to_sqlite - INFO - Successfully wrote order_id: 104 to database.
+2024-10-24 20:47:22,786 - pipeline - INFO - Done

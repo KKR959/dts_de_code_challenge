@@ -1,2 +1,3 @@
 #Git Ignore Files/Folders  
 venv/
+__pycache__/

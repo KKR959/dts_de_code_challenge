@@ -7,7 +7,7 @@
 clean:
 	@echo Cleaning environment...
 	@if exist venv rmdir /S /Q venv
-	# @if exist log.txt del /F /Q log.txt # NOTE to remove this line and replace with purge function of all logs
+	@if exist log.txt del /F /Q log.txt
 	@if exist ro.db del /F /Q ro.db
 	@echo Cleanup finished.
 
